@@ -1,5 +1,5 @@
 'mode': 'wsgi'
-'working_dir': '/home/liza/PycharmProjects/Stepik12/'
+'working_dir': '/home/box/web'
 'args': 'hello:wsgi_appliction'
 
 bind = '0.0.0.0:8080'
