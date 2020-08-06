@@ -1,7 +1,13 @@
 def wsgi_appliction(environ, start_response):
-    status = '200 OK'
-    headers = [('Content-Type', 'text/plain')]
-    body = [bytes(i + '\n', 'ascii') for i in environ['QUERY_STRING'].split('&')]
+    raw_uri = str(environ.get('RAW_URI'))
+    raw_uri = raw_uri[2:]
+    params = raw_uri.split('&')
 
-    start_response(status, headers)
-    return body
+    data = ''
+    for param in params:
+        data += param + '\r\n'
+
+    start_response("200 OK", [
+        ("Content-Type", "text/plain"),
+    ])
+    return iter([data])
