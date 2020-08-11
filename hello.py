@@ -10,6 +10,3 @@ def wsgi_appliction(environ, start_response):
         ("Content-Type", "text/plain"),
     ])
     return iter([data])
-    
-    
-    
