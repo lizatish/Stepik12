@@ -17,11 +17,11 @@ from django.urls import path, re_path
 from . import views
 
 urlpatterns = [
-    re_path(r'^$', views.test),
+    path(r'^$', views.test),
     path(r'^login/', views.test, name='login'),
     path(r'^signup/', views.test, name='signup'),
-    re_path(r'^question/(?P<id>[0-9]+)/$', views.test, name='question'),
-    path('ask/', views.test, name='ask'),
-    path('popular/', views.test, name='popular'),
-    path('new/', views.test, name='new')
+    path(r'^question/(?P<id>[0-9]+)/$', views.test, name='question'),
+    path(r'ask/', views.test, name='ask'),
+    path(r'popular/', views.test, name='popular'),
+    path(r'new/', views.test, name='new')
 ]
