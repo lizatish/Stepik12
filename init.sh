@@ -6,4 +6,4 @@ sudo /etc/init.d/gunicorn restart
 
 sudo ln -s /home/box/web/etc/hello_django.py  /etc/gunicorn.d/hello_django.py
 sudo /etc/init.d/gunicorn restart
-sudo gunicorn -c /etc/gunicorn.d/hello_django.py ask.wsgi:application
+
