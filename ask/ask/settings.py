@@ -76,11 +76,12 @@ WSGI_APPLICATION = 'ask.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
+
         'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-           'read_default_file': '/etc/mysql/my.cnf',
-       },
+        'NAME': 'stepic_web',
+        'USER': 'box',
     }
 }
 
