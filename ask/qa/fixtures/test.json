@@ -1,0 +1,137 @@
+[
+  {
+    "model": "qa.question",
+    "id": 1,
+    "fields": {
+      "title": "В чем смысл жизни?",
+      "text": "Подумай сам",
+      "added_at": "2020-08-07 12:22",
+      "rating": "1111",
+      "author": 1,
+      "likes": "1111"
+    }
+  },
+  {
+    "model": "qa.question",
+    "id": 2,
+    "fields": {
+      "title": "Кто я для тебя?",
+      "text": "Поток дождя?",
+      "added_at": "2020-08-07 12:22",
+      "rating": "1111",
+      "author": 2,
+      "likes": "1111"
+    }
+  },
+  {
+    "model": "qa.question",
+    "id": 3,
+    "fields": {
+      "title": "Кто я для тjjjебя?",
+      "text": "Поток дождя?",
+      "added_at": "2020-08-07 12:22",
+      "rating": "1111",
+      "author": 3,
+      "likes": "1111"
+    }
+  },
+  {
+    "model": "qa.question",
+    "id": 4,
+    "fields": {
+      "title": "Кто я дляjjjjjj тебя?",
+      "text": "Поток дождя?",
+      "added_at": "2020-08-07 12:22",
+      "rating": "1111",
+      "author": 4,
+      "likes": "1111"
+    }
+  },
+  {
+    "model": "qa.question",
+    "id": 5,
+    "fields": {
+      "title": "Кто я для тебя?",
+      "text": "Поток дождя?",
+      "added_at": "2020-08-07 12:22",
+      "rating": "1111",
+      "author": 5,
+      "likes": "1111"
+    }
+  },
+  {
+    "model": "qa.answer",
+    "id": 1,
+    "fields": {
+      "text": "Ответ1",
+      "added_at": "2020-08-07 12:22",
+      "question": 1,
+      "author": 5
+    }
+  },
+  {
+    "model": "qa.answer",
+    "id": 2,
+    "fields": {
+      "text": "Ответ2",
+      "added_at": "2020-08-07 12:22",
+      "question": 1,
+      "author": 4
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "1",
+      "password": "pbkdf2_sha256$120000$ERBeHOjfv65y$zepJjRmSA3GH6K80729t6hW70Ibx8aqfGu75L1Lvp3w=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "2",
+      "password": "pbkdf2_sha256$120000$6TVALfRJHjMh$KpijBcDVPU+770zjM+ixMY8XTE4b++S39DcqubI0OWo=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "3",
+      "password": "pbkdf2_sha256$120000$i4EIMxfmdbSI$Dbay2TjV/VzeixGzg2sHr+8cZYvZ8/Et0/hFS1RvL/o=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "username": "4",
+      "password": "=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "username": "5",
+      "password": "pbkdf2_sha256$120000$7pMUWo60awnv$8MGauSYA/r+G0LkK82J7jxYiLQ2VI6XDpjefy6AcTlM=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true
+    }
+  }
+]

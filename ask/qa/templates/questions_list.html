@@ -1,0 +1,11 @@
+<nav>
+    <ul class="paginator">
+        {% for question in page %}
+            <li><a href="{{ paginator.baseurl }}{{ question.id }}/">{{ question.title }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+
+
+
+
