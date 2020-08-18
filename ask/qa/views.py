@@ -54,7 +54,8 @@ def question(request, id):
         question = Question.objects.get(id=id)
     except Question.DoesNotExist:
         raise Http404
+    print(question.answer_set)
     context = {'question': question,
-               'answers': Answer.objects.all().filter(question=id)
+               'answers': question.answer_set.all()
                }
     return render(request, 'one_question.html', context)
