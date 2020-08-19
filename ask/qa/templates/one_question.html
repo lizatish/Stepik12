@@ -1,6 +1,6 @@
 {% if question %}
-    {{question.title}}
-    {{question.text}}
+    {{question.title}}<br>
+    {{question.text}}<br>
     {% for answer in answers %}
         <li>{{answer.text}}</li>
     {% endfor %}
