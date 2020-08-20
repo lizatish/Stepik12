@@ -1,7 +1,17 @@
-{% if question %}
-    {{question.title}}<br>
-    {{question.text}}<br>
-    {% for answer in answers %}
-        <li>{{answer.text}}</li>
+{{question.title}}<br>
+{{question.text}}<br>
+{% for answer in answers %}
+    <li>{{answer.text}}</li>
+{% endfor %}
+
+<form method="POST" action="{{url}}">
+    {% for field in form %}
+        {% if field.errors %} has error {% endif %}
+        {{field.label}}<br>
+        {{field}}<br>
     {% endfor %}
-{% endif %}
+    {% csrf_token %}
+    <div>
+    <button>Add answer</button>
+  </div>
+</form>

@@ -1,0 +1,11 @@
+<form method="POST" action="/ask/">
+    {% for field in form %}
+        {% if field.errors %} has error {% endif %}
+        {{field.label}}<br>
+        {{field}}<br>
+    {% endfor %}
+    {% csrf_token %}
+    <div>
+    <button>Add question</button>
+  </div>
+</form>

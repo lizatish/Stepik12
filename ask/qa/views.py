@@ -1,8 +1,9 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
 from django.http import Http404
-from .models import Question, Answer
+from .models import Question
+from .forms import AnswerForm, AskForm
 
 
 def test(request, *args, **kwargs):
@@ -45,7 +46,7 @@ def popular_questions(request):
     return render(request, 'questions_list.html', context)
 
 
-def question(request, id):
+def show_question(request, id):
     try:
         id = int(id)
     except ValueError:
@@ -54,7 +55,29 @@ def question(request, id):
         question = Question.objects.get(id=id)
     except Question.DoesNotExist:
         raise Http404
+
+    if request.method == 'GET':
+        form = AnswerForm(initial={'question': question.id})
+    else:
+        form = AnswerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/question/' + str(id) + '/')
+
     context = {'question': question,
-               'answers': question.answer_set.all()
+               'answers': question.answer_set.all(),
+               'form': form,
+               'url': '/question/' + str(id) + '/'
                }
     return render(request, 'one_question.html', context)
+
+
+def create_question(request):
+    if request.method == 'GET':
+        form = AskForm()
+    else:
+        form = AskForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/question/' + str(len(Question.objects.all())) + '/')
+    return render(request, 'create_question.html', {'form': form})

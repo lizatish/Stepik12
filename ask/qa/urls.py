@@ -20,18 +20,8 @@ urlpatterns = [
     url(r'^$', views.new_questions),
     url('login/', views.test, name='login'),
     url('signup/', views.test, name='signup'),
-    url(r'^question/(?P<id>[0-9]+)/$', views.question, name='question'),
-    url('ask/', views.test, name='ask'),
+    url(r'^question/(?P<id>[0-9]+)/$', views.show_question, name='question'),
+    url('ask/', views.create_question, name='ask'),
     url('popular/', views.popular_questions, name='popular'),
     url('new/', views.test, name='new')
 ]
-
-# urlpatterns = [
-#     url(r'^$', views.new_questions),
-#     url(r'^login/', views.test, name='login'),
-#     url(r'^signup/', views.test, name='signup'),
-#     url(r'^question/(?P<id>[0-9]+)/$', views.question, name='question'),
-#     url(r'^ask/', views.test, name='ask'),
-#     url(r'^popular/', views.popular_questions, name='popular'),
-#     url(r'^new/', views.test, name='new')
-# ]
